@@ -2,6 +2,7 @@
   "name": "front",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:9090/",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@testing-library/jest-dom": "^5.16.5",

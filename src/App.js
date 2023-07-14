@@ -50,15 +50,15 @@ export default function App() {
 }
 
 const fetchData = async (dispatch) => {
-  const allData = await (await Axios.post("https://backend-a77m.onrender.com/movie_data/fetch")).data;
+  const allData = await (await Axios.post("/movie_data/fetch")).data;
   console.log(allData);
-  const filterDataWithTimeStamp = await filterWithTimeStamp(allData);
+  // const allData = await filterWithTimeStamp(allData);
 
-  await setAllMoviesData(filterDataWithTimeStamp, dispatch);
-  await setNewMovies(filterDataWithTimeStamp, dispatch);
-  await setBollywoodMovies(filterDataWithTimeStamp, dispatch);
-  await setHollywoodMovies(filterDataWithTimeStamp, dispatch);
-  await setSeries(filterDataWithTimeStamp, dispatch);
+  await setAllMoviesData(allData, dispatch);
+  await setNewMovies(allData, dispatch);
+  await setBollywoodMovies(allData, dispatch);
+  await setHollywoodMovies(allData, dispatch);
+  await setSeries(allData, dispatch);
 };
 
 const filterWithTimeStamp = async (allData) => {
