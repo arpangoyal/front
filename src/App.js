@@ -61,18 +61,18 @@ const fetchData = async (dispatch) => {
   await setSeries(allData, dispatch);
 };
 
-const filterWithTimeStamp = async (allData) => {
-  const filterData = await allData.sort((a, b) => {
-    if (a.TimeStamp < b.TimeStamp) {
-      return 1;
-    } else if (b.TimeStamp < a.TimeStamp) {
-      return -1;
-    }
-    return 0;
-  });
+// const filterWithTimeStamp = async (allData) => {
+//   const filterData = await allData.sort((a, b) => {
+//     if (a.TimeStamp < b.TimeStamp) {
+//       return 1;
+//     } else if (b.TimeStamp < a.TimeStamp) {
+//       return -1;
+//     }
+//     return 0;
+//   });
 
-  return filterData;
-};
+//   return filterData;
+// };
 
 const setAllMoviesData = async (allData, dispatch) => {
   await dispatch({ type: "ALL_MOVIE_DATA", data: allData });
