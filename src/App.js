@@ -50,7 +50,7 @@ export default function App() {
 }
 
 const fetchData = async (dispatch) => {
-  const allData = await (await Axios.post("/movie_data/fetch")).data;
+  const allData = await (await Axios.post("https://backend-a77m.onrender.com/movie_data/fetch")).data;
   console.log(allData);
   const filterDataWithTimeStamp = await filterWithTimeStamp(allData);
 
